@@ -1,0 +1,23 @@
+name: CI
+
+# Exécuté à chaque git push
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Setup uv
+        uses: astral-uv/setup-uv@v6
+
+      - name: Setup Python
+        run: uv python install
+
+      - name: Run pre-commit via uv
+        run: uv run pre-commit run -a
+
+      - name: Run tests via uv
+        run: uv run python -m unittest
