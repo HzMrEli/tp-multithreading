@@ -14,6 +14,16 @@ class TestTask(unittest.TestCase):
 
         np.testing.assert_allclose(result_ax, task_instance.b)
 
+    def test_equality(self):
+        """
+        Teste l'égalité entre Task (a) et sa représentation JSON (b).
+        """
+        a = Task()
+        text = a.to_json()
+        b = Task.from_json(text)
+
+        self.assertEqual(a, b)
+
 
 if __name__ == "__main__":
     unittest.main()
