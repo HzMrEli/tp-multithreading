@@ -1,0 +1,24 @@
+# C++ Build
+build/
+out/
+*.exe
+*.obj
+*.o
+*.dll
+*.lib
+*.pdb
+*.ilk
+*.exp
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# VS Code
+.vscode/
+
+# Project Artifacts
+*.csv
+*.png
