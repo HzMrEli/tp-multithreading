@@ -18,7 +18,3 @@ __pycache__/
 
 # VS Code
 .vscode/
-
-# Project Artifacts
-*.csv
-*.png
